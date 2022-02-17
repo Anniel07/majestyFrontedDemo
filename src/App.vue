@@ -1,17 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <nav class="navbar fixed-top navbar-expand navbar-dark bg-dark">
+    <router-link to="/" class="navbar-brand">Consuming APIS</router-link>
+    <div class="navbar-nav mr-auto">
+      <li class="nav-item">
+         <router-link to="/" class="nav-link">Stories</router-link> 
+      </li>
+      <li class="nav-item">
+        <router-link to="/movies" class="nav-link">Movies</router-link>
+      </li>
+    </div>
+  </nav>
+  <!-- display each item here, this is the target for each component -->
+  <router-view />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+//import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    
+  },
+};
 </script>
 
 <style>
@@ -21,6 +32,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
