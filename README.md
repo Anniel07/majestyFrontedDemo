@@ -1,9 +1,9 @@
 # demo-api
 
-This is a demo for using an api from textBook "The Majesty of vue" in chapter 8
+This is a demo for using an api from textBook "The Majesty of vue" in chapter 8.
 The api have two entities stories and movies, there is a UI for make a crud
 on both entities.
-This proyect use this dependencies
+This proyect use this
 "dependencies": {
     "axios": "^0.26.0",
     "core-js": "^3.6.5",
@@ -35,6 +35,9 @@ npm run build
 ```
 npm run lint
 ```
+
+### A view of the app
+![Screenshot](view.png)
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
