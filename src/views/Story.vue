@@ -27,11 +27,11 @@
         </button>
         |
         <button @click="editStory(story, true)" class="btn btn-warning">
-          Edit
+          <pencil-icon title="Edit" /> 
         </button>
         |
         <button @click="deleteStory(story)" class="btn btn-danger">
-          Delete
+          <delete-icon title="Delete" /> 
         </button>
       </div>
       <div v-else>
@@ -49,6 +49,7 @@
           class="btn btn-success"
           @click="storeStory(story)"
         >
+          <plus-icon title="Add" /> 
           Save New Story
         </button>
         <!--Always show cancel-->
@@ -65,12 +66,20 @@ Aunque pasa este error la aplicacion funciona bien
 -->
 
 <script>
+import DeleteIcon from 'vue-material-design-icons/Delete.vue';
+import PencilIcon from 'vue-material-design-icons/Pencil.vue';
+
+
 import { APISettings } from '../config.js'; 
 //Story Component, this component is used in Stories.vue
 export default {
   name: "Story",
   props: {
     story: Object,
+  },
+  components: {
+    DeleteIcon, 
+    PencilIcon,
   },
   /**
    * All method used in story Component

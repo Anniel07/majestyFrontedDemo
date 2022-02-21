@@ -22,11 +22,11 @@
       <div v-if="!movie.editing">
         
         <button @click="editMovie(movie, true)" class="btn btn-warning">
-          Edit
+          <pencil-icon title="Edit" /> 
         </button>
         |
         <button @click="deleteMovie(movie)" class="btn btn-danger">
-          Delete
+          <delete-icon title="Delete" /> 
         </button>
       </div>
       <div v-else>
@@ -60,12 +60,18 @@ Aunque pasa este error la aplicacion funciona bien
 -->
 
 <script>
+import DeleteIcon from 'vue-material-design-icons/Delete.vue';
+import PencilIcon from 'vue-material-design-icons/Pencil.vue';
 import { APISettings } from '../config.js'; 
 //movie Component, this component is used in movies.vue
 export default {
   name: "Movie",
   props: {
     movie: Object,
+  },
+  components: {
+    DeleteIcon, 
+    PencilIcon,
   },
   /**
    * All method used in movie Component

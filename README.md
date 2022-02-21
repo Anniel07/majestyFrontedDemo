@@ -1,9 +1,19 @@
 # demo-api
 
-This proyect use vue 3, vueRouter4, axios. This is a demo for using an api,
-the api have two entities stories and movies
-En proximas iteraciones, adicionar iconos y hacer sort by upvotes en stories
-Falta ver como hacer reactivity para cambiar array, ejemplo cuando se ordena
+This is a demo for using an api from textBook "The Majesty of vue" in chapter 8
+The api have two entities stories and movies, there is a UI for make a crud
+on both entities.
+This proyect use this dependencies
+"dependencies": {
+    "axios": "^0.26.0",
+    "core-js": "^3.6.5",
+    "lodash": "^4.17.21",
+    "vue": "^3.0.0",
+    "vue-axios": "^3.4.1",
+    "vue-material-design-icons": "^5.0.0",
+    "vue-router": "^4.0.12"
+  }, 
+
 
 
 ## Project setup

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <br/><br/><br/>
-    <h1>Movies</h1>
+    <h1>Movies<video-icon  /></h1>
 
     <table class="table">
       <tr class="bg-dark text-white">
@@ -19,6 +19,7 @@
     <p class="lead">
       Here's a list of all your Movies.
       <button @click="createMovie()" class="btn btn-primary">
+        <plus-icon title="Add"/>
         Add a new one?
       </button>
     </p>
@@ -31,12 +32,15 @@
 <script>
 import Movie from "./Movie.vue";
 import { APISettings } from '../config.js'; 
-
+import VideoIcon from "vue-material-design-icons/Video.vue";
+import PlusIcon from 'vue-material-design-icons/Plus.vue';
 
 export default {
   name: "Movies",
   components: {
     Movie, //use this component inside Movies
+    VideoIcon,
+    PlusIcon,
   },
   data: function () {
     return {
@@ -72,7 +76,7 @@ export default {
     },
 
   },
-  async mounted() {
+  created() {
     this.getAllMovies();
   },
 
